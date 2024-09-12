@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+{% block title %}
+Users Data
+{% endblock %}
+
+{% block content %}
+    <div class="d-flex flex-row gap-4 flex-wrap">
+        {% for user in users %}
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{user.rule}} account</h5>
+                    <p class="card-text">username: {{user.username}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+{% endblock %}
